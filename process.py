@@ -40,16 +40,16 @@ for row in df.itertuples(index=False):
         i = section_names.index(S)
         f = section_files[i]
         section_count[i] += 1
-    f.write("::: tribute\n")
+    f.write("::: {.tribute}\n")
     f.write(T + "\n")
     f.write("\n")
-    f.write("::: attrib\n")
+    f.write("::: {.attrib}\n")
     if isinstance(N,str):
-        f.write("- "+N+"\n")
+        f.write(N+"\n")
     else:
-        f.write("- (anonymous)\n")
+        f.write("Anonymous\n")
     if isinstance(H,str):
-        f.write("("+H+")\n")
+        f.write("(" + H + ")\n")
     f.write(":::\n")
     f.write(":::\n")
 

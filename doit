@@ -1,3 +1,2 @@
 python process.py
-pandoc intro.md intro_GENERAL.md tmp/GENERAL.md intro_INFORMATION_THEORY.md tmp/INFORMATION_THEORY.md intro_ITILA.md tmp/ITILA.md intro_MATERIALS.md tmp/MATERIALS.md intro_SEWTHA.md tmp/SEWTHA.md intro_AIMS.md tmp/AIMS.md intro_DASHER.md tmp/DASHER.md -o mackay_tribute.pdf --pdf-engine=xelatex --include-in-header=header.tex
-cp mackay_tribute.pdf /mnt/c/Users/PilgrimBeart/Desktop
+./build_pdf

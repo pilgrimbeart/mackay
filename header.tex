@@ -1,6 +1,36 @@
+\usepackage[a4paper,margin=25mm]{geometry}
+
 \usepackage{fontspec}
 \setmainfont{Noto Serif}
+% Math font (robust symbol coverage)
+\usepackage{unicode-math}
+% either omit the next line entirely, or use the TeX Live default explicitly:
+\setmathfont{Latin Modern Math}
 
 \usepackage{amssymb}
 \usepackage{newunicodechar}
 \newunicodechar{♥}{\ensuremath{\heartsuit}}
+\newunicodechar{√}{\ensuremath{\sqrt{}}}
+\newunicodechar{≤}{\ensuremath{\le}}
+\newunicodechar{≥}{\ensuremath{\ge}}
+\newunicodechar{≠}{\ensuremath{\neq}}
+\newunicodechar{≈}{\ensuremath{\approx}}
+\newunicodechar{±}{\ensuremath{\pm}}
+\newunicodechar{×}{\ensuremath{\times}}
+\newunicodechar{÷}{\ensuremath{\div}}
+\newunicodechar{∞}{\ensuremath{\infty}}
+
+% Boxed tributes
+\usepackage[most]{tcolorbox}
+
+\newtcolorbox{tribute}{
+  enhanced,
+  breakable,
+  colback=white,
+  colframe=black,
+  boxrule=0.4pt,
+  arc=1.5mm,
+  left=2mm, right=2mm, top=1.5mm, bottom=1.5mm,
+  before skip=6pt,
+  after skip=6pt
+}

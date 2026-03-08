@@ -4,6 +4,7 @@
 import pandas as pd
 import sys
 import time
+import random
 
 DIR = "tmp/"
 
@@ -13,8 +14,7 @@ url += f"&_cb={int(time.time())}" # Cache-busting so we always get the latest co
 df = pd.read_csv(url)  # pandas follows redirects
 
 section_names = []
-section_files = []
-section_count = []
+section_tributes = [] 
 
 def normalise_for_pdf(s):
     if s is None:
@@ -24,38 +24,44 @@ def normalise_for_pdf(s):
     s = s.replace("❤", "♥")       # use U+2665 (widely supported)
     return s
 
+
+# Read in all tributes, and store by section name
 for row in df.itertuples(index=False):
     S, N, H, T = row.Section, row.Name, row.How_knew_David, row.Tribute
     T = normalise_for_pdf(T)
     if not isinstance(S,str):
-        print("ENTRY NEEDS LABELLING WITH A SECTION")
+        print("ENTRY NEEDS LABELLING WITH A SECTION - PUTTING IN 'GENERAL'")
         print(row)
-        sys.exit(-1)
+        S = "GENERAL" # Default
     if S not in section_names:
-        f = open(DIR + S + ".md","wt")
         section_names.append(S)
-        section_files.append(f)
-        section_count.append(1)
+        section_tributes.append([])
+        i = len(section_names)-1
     else:
         i = section_names.index(S)
-        f = section_files[i]
-        section_count[i] += 1
-    f.write("::: {.tribute}\n")
-    f.write(T + "\n")
-    f.write("\n")
-    f.write("::: {.attrib}\n")
+    tribute = ""
+    tribute += "::: {.tribute}\n"
+    tribute += T + "\n"
+    tribute += "\n"
+    tribute += "::: {.attrib}\n" 
     if isinstance(N,str):
-        f.write(N+"\n")
+        tribute += N+"\n"
     else:
-        f.write("Anonymous\n")
+        tribute += "Anonymous\n"
     if isinstance(H,str):
-        f.write("(" + H + ")\n")
-    f.write(":::\n")
-    f.write(":::\n")
+        tribute += "(" + H + ")\n"
+    tribute += ":::\n"
+    tribute += ":::\n"
+    section_tributes[i].append(tribute)
 
-total = 0
-print("Section Entries")
+# Create files
 for i in range(len(section_names)):
-    print(section_names[i]," ", section_count[i])
-    total += section_count[i]
-print("Total:",total)
+    S = section_names[i]
+    f = open(DIR + S + ".md","wt")
+    random.shuffle(section_tributes[i]) # Put tributes in random order
+    count = 0
+    for j in range(len(section_tributes[i])):
+        f.write(section_tributes[i][j])
+        count += len(section_tributes[i][j])
+    f.close()
+    print(S,len(section_tributes[i]),"tributes",count,"chars")

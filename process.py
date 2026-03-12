@@ -27,7 +27,7 @@ def normalise_for_pdf(s):
 
 # Read in all tributes, and store by section name
 for row in df.itertuples(index=False):
-    S, N, H, T = row.Section, row.Name, row.How_knew_David, row.Tribute
+    S, N, H, T, I = row.Section, row.Name, row.How_knew_David, row.Tribute, row.Name_for_index
     T = normalise_for_pdf(T)
     if not isinstance(S,str):
         print("ENTRY NEEDS LABELLING WITH A SECTION - PUTTING IN 'GENERAL'")
@@ -44,8 +44,9 @@ for row in df.itertuples(index=False):
     tribute += T + "\n"
     tribute += "\n"
     tribute += "::: {.attrib}\n" 
-    if isinstance(N,str):
-        tribute += N+"\n"
+    if isinstance(N,str) and isinstance(I,str):
+        print("index is",I)
+        tribute += N+"\index{" + I + "}\n"
     else:
         tribute += "Anonymous\n"
     if isinstance(H,str):

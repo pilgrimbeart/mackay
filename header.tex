@@ -36,3 +36,17 @@
   before skip=6pt,
   after skip=6pt
 }
+
+% Page numbers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% Index
+\usepackage{imakeidx}
+\makeindex
+
+% Multi-column support for the printed index
+\usepackage{multicol}

@@ -7,6 +7,7 @@ import time
 import random
 
 DIR = "tmp/"
+SHUFFLE_SEED = 20260313
 
 url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSTHBL_p4dyp6P3e1Htfkv68EDi1W9POHJ17Xnr0BtnzyjsZC6MymfIu9dSmAa4v9-mH7J0mJWQei00/pub?gid=45077070&single=true&output=csv"
 url += f"&_cb={int(time.time())}" # Cache-busting so we always get the latest copy
@@ -28,11 +29,15 @@ def normalise_for_pdf(s):
 # Read in all tributes, and store by section name
 for row in df.itertuples(index=False):
     S, N, H, T, I = row.Section, row.Name, row.How_knew_David, row.Tribute, row.Name_for_index
+    if not isinstance(T,str):
+        print("MISSING TRIBUTE!")
+        print(row)
+        sys.exit(-1)
     T = normalise_for_pdf(T)
     if not isinstance(S,str):
-        print("ENTRY NEEDS LABELLING WITH A SECTION - PUTTING IN 'GENERAL'")
+        print("ENTRY NEEDS LABELLING WITH A SECTION")
         print(row)
-        S = "GENERAL" # Default
+        sys.exit(-1)
     if S not in section_names:
         section_names.append(S)
         section_tributes.append([])
@@ -45,8 +50,7 @@ for row in df.itertuples(index=False):
     tribute += "\n"
     tribute += "::: {.attrib}\n" 
     if isinstance(N,str) and isinstance(I,str):
-        print("index is",I)
-        tribute += N+"\index{" + I + "}\n"
+        tribute += N+"\index{" + I + "|hyperpage}\n"
     else:
         tribute += "Anonymous\n"
     if isinstance(H,str):
@@ -56,10 +60,11 @@ for row in df.itertuples(index=False):
     section_tributes[i].append(tribute)
 
 # Create files
+random.seed(SHUFFLE_SEED)
 for i in range(len(section_names)):
     S = section_names[i]
     f = open(DIR + S + ".md","wt")
-    random.shuffle(section_tributes[i]) # Put tributes in random order
+    random.shuffle(section_tributes[i]) # Put tributes in deterministic pseudo-random order
     count = 0
     for j in range(len(section_tributes[i])):
         f.write(section_tributes[i][j])

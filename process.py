@@ -25,10 +25,19 @@ def normalise_for_pdf(s):
     s = s.replace("❤", "♥")       # use U+2665 (widely supported)
     return s
 
+def clean_text_field(s):
+    if not isinstance(s, str):
+        return s
+    return s.strip()
+
 
 # Read in all tributes, and store by section name
 for row in df.itertuples(index=False):
     S, N, H, T, I = row.Section, row.Name, row.How_knew_David, row.Tribute, row.Name_for_index
+    S = clean_text_field(S)
+    N = clean_text_field(N)
+    H = clean_text_field(H)
+    I = clean_text_field(I)
     if not isinstance(T,str):
         print("MISSING TRIBUTE!")
         print(row)

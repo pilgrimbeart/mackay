@@ -1,3 +1,7 @@
 tmp/
 tmp/.*
-.pdf
+*.pdf
+*.aux
+*.idx
+*.log
+*.out

@@ -1,2 +1,3 @@
-pandoc intro.md intro_CLARITY.md tmp/CLARITY.md intro_INFORMATION_THEORY.md tmp/INFORMATION_THEORY.md intro_ITILA.md tmp/ITILA.md intro_SEWTHA.md tmp/SEWTHA.md intro_DASHER.md tmp/DASHER.md intro_PERSON.md tmp/PERSON.md index.md -o mackay_tribute.pdf --pdf-engine=latexmk --pdf-engine-opt=-xelatex --include-in-header=header.tex --lua-filter=tribute.lua
-cp mackay_tribute.pdf /mnt/c/Users/PilgrimBeart/Desktop
+pandoc intro.md intro_CLARITY.md tmp/CLARITY.md intro_INFORMATION_THEORY.md tmp/INFORMATION_THEORY.md intro_ITILA.md tmp/ITILA.md intro_SEWTHA.md tmp/SEWTHA.md intro_DASHER.md tmp/DASHER.md intro_PERSON.md tmp/PERSON.md index.md -o mackay_tribute.pdf --pdf-engine=latexmk --pdf-engine-opt=-xelatex --include-in-header=header.tex --lua-filter=tribute.lua &&
+cp mackay_tribute.pdf /mnt/c/Users/PilgrimBeart/Desktop &&
+rm -f ./*.aux ./*.idx ./*.log ./*.out ./*.ilg ./*.ind ./*.xdv ./*.fdb_latexmk ./*.fls

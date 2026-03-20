@@ -1,18 +1,29 @@
 # Collates all tributes into .md files by section
 # Formatted with pandocs-style ":::" fenced-div blocks
 
+from io import StringIO
 import pandas as pd
+import random
+import requests
 import sys
 import time
-import random
 
 DIR = "tmp/"
 SHUFFLE_SEED = 20260313
 
 url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSTHBL_p4dyp6P3e1Htfkv68EDi1W9POHJ17Xnr0BtnzyjsZC6MymfIu9dSmAa4v9-mH7J0mJWQei00/pub?gid=45077070&single=true&output=csv"
-url += f"&_cb={int(time.time())}" # Cache-busting so we always get the latest copy
+url += f"&_cb={time.time_ns()}"  # Stronger cache-busting than second-resolution timestamps
 
-df = pd.read_csv(url)  # pandas follows redirects
+response = requests.get(
+    url,
+    headers={
+        "Cache-Control": "no-cache, max-age=0",
+        "Pragma": "no-cache",
+    },
+    timeout=30,
+)
+response.raise_for_status()
+df = pd.read_csv(StringIO(response.content.decode("utf-8-sig")))
 
 section_names = []
 section_tributes = [] 

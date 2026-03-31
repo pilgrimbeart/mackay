@@ -7,3 +7,4 @@ Written with the clarity of an engineer and the curiosity of a physicist, it mov
 
 ITILA has had an unusually broad impact: it trained generations of students to think in “numbers, not adjectives”, it gave researchers a common language across fields that often talk past each other, and it helped normalise the idea that uncertainty should be modelled explicitly rather than waved away - an idea that now sits at the core of modern machine learning and statistical engineering.
 
+\newpage

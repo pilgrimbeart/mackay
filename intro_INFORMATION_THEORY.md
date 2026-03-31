@@ -10,3 +10,8 @@ He also spent time in the wider London–Cambridge machine-learning ecosystem, i
 
 The world-level effect of this body of work is everywhere but rarely named: the error-correcting and probabilistic decoding ideas he advanced underpin the reliability of modern digital communication and storage, and the same “inference-first” mindset now saturates machine learning—making systems that cope gracefully with noise, ambiguity, and partial information.
 
+![David cutting Inference Group cakes.](photos/DSC_0299_with_levels_tweaked.JPG){ width=100% }
+
+![Neural network pioneer John Hopfield with David at the Royal Society in August 2012. Photo by John Hopfield.](photos/J_D.Mckay_August2012a.jpg){ width=100% }
+
+\newpage

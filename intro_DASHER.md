@@ -7,3 +7,6 @@ Instead of tapping keys, Dasher turns writing into continuous steering—an on-s
 
 For many users with motor impairments, Dasher offered a route to fluent communication using whatever control signal they had available; for the wider world, it helped legitimise the idea that prediction and uncertainty aren’t just engineering details, but can be made visible and helpful at the point of interaction—an influence that now shows up, in quieter ways, across modern text entry, assistive technology, and adaptive user interfaces.
 
+![Dasher collaborator Mick Donegan, Dasher user Kathrin Klapper née Lemler, David. Photo by Mick Donegan.](photos/mick.jpeg){ width=100% }
+
+\newpage

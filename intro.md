@@ -1,6 +1,3 @@
-% David J. C. MacKay — Tributes
-% March 2026
-
 # Introduction
 
 David J. C. MacKay (1967–2016) combined clarity of thought with kindness and curiosity, changing people's lives directly and indirectly across many different subjects. He had a rare talent for turning messy questions into crisp, checkable reasoning and an insistence on *numbers, not adjectives*, delivered with wit, warmth and compassion.
@@ -12,5 +9,3 @@ I've attempted the hopeless task of organising these by topic, but inevitably th
 Pilgrim Beart
 
 March 2026
-
-

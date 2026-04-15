@@ -7,6 +7,7 @@
 On 6 May 2016, after David's funeral at Barton Woodland Burial site, a lady asked me for a copy of what I had said, so I typed it for her. Last week I found it as I was tidying papers, and perhaps it may be useful now.
 
 
+\par\medskip
 \centerline{David MacKay}
 
 Cycling was not a major hobby of David’s. It was, rather, a convenient way of getting from place to place – in Cambridge particularly. But since his newspaper obituaries have conspicuously featured bicycles, you may like to hear the tale of David’s first cycling accident.

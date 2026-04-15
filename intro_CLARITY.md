@@ -1,8 +1,7 @@
 \clearpage
 
-# Clarity of thought 
+# Clarity of thought {#chapter-clarity}
 David's brain operated with a clarity that the rest of us could only envy, coupled with an ability to deliver observations with an engaging, dry wit and a sparkle in the eye, which inspired so many.
 
 ![](photos/one-day-meeting-david-mackay-energy-and-information.jpeg){ width=100% }
 
-\newpage

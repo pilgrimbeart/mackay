@@ -1,6 +1,11 @@
 \usepackage[a4paper,left=25mm,right=25mm,top=25mm,bottom=20mm]{geometry}
 \PassOptionsToPackage{hidelinks}{hyperref}
 
+\usepackage{draftwatermark}
+\SetWatermarkText{DRAFT}
+\SetWatermarkScale{2}
+\SetWatermarkLightness{0.9}
+
 \usepackage{fontspec}
 \setmainfont{Noto Serif}
 % Math font (robust symbol coverage)
@@ -56,3 +61,5 @@
 \usepackage[noautomatic]{imakeidx}
 \makeindex[columns=3,columnsep=18pt,options=-s\ index.ist]
 \renewcommand{\indexname}{Index of Contributors}
+
+\newcommand{\chapterlink}[2]{\hyperref[#1]{#2\dotfill \pageref*{#1}}}

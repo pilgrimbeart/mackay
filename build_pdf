@@ -4,7 +4,7 @@ set -euo pipefail
 
 rm -f current.pdf debug.pdf tmp/current.tex tmp/debug.* tmp/test.ind
 
-inputs=(metadata.md frontispiece.md contents.md intro.md foreword.md)
+inputs=(metadata.md frontispiece.md intro.md foreword.md)
 
 for section in CLARITY INFORMATION_THEORY ITILA SEWTHA DASHER PERSON; do
   inputs+=("intro_${section}.md")

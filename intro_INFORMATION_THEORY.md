@@ -1,6 +1,6 @@
 \clearpage
 
-# The Inference Group
+# The Inference Group {#chapter-inference-group}
 
 David’s work in information theory was driven by a simple, powerful framing: communication and learning are both problems of inference under uncertainty, and the right mathematics should lead to algorithms that are not just elegant but useful.
 
@@ -12,6 +12,6 @@ The world-level effect of this body of work is everywhere but rarely named: the 
 
 ![David cutting Inference Group cakes.](photos/DSC_0299_with_levels_tweaked.JPG){ width=100% }
 
-![Neural network pioneer John Hopfield with David at the Royal Society in August 2012. Photo by John Hopfield.](photos/J_D.Mckay_August2012a.jpg){ width=100% }
+![David with neural network pioneer John Hopfield at the Royal Society in August 2012. Photo by John Hopfield.](photos/J_D.Mckay_August2012a.jpg){ width=100% }
 
 \newpage

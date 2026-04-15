@@ -1,5 +1,0 @@
-\clearpage
-
-\tableofcontents
-
-\newpage

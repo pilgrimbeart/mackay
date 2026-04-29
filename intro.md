@@ -4,9 +4,9 @@ Professor Sir David John Cameron MacKay, M.A., Ph.D., FRS, FInstP, FICE (1967–
 
 In 2026, on the tenth anniversary of his death, the Cambridge Philosophical Society organised a one-day event to celebrate David’s life. Inspired by this event I invited people to share their memories of him, whether they had known him personally, or through his works — as teacher, colleague, collaborator, creator, mentor, and friend. I have attempted the hopeless task of arranging them by topic, though inevitably there is much overlap because, as David was fond of saying, “everything is connected”.
 
-It has been a true joy and privilege to curate these extraordinary testimonials, which together reveal even more sides to David than we had each encountered. Varied in style and length, I hope that together they preserve something of his voice and influence, and perhaps even suggest how each of us might usefully “be more David”. 
+It has been a true joy and privilege to curate these extraordinary testimonials, which together reveal even more sides to David than each of us had individually encountered. Varied in style and length, they preserve something of his voice and influence, and perhaps even suggest how each of us might usefully “be more David”. 
 
-Thank you to all who contributed, and especially to Seb Wills for creating the online version [davidmackay.uk](https://davidmackay.uk), Prof. Alan Blackwell for the foreword and to David's mother Valerie for the last word. 
+My thanks to all who contributed, and especially to Seb Wills for creating the online version [davidmackay.uk](https://davidmackay.uk), to Prof. Alan Blackwell for the foreword and to David's mother Valerie for the last word. 
 
 Pilgrim Beart
 
